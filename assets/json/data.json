@@ -1,0 +1,21 @@
+{
+    "basicos": {
+        "nombre": "Brian Lobo",
+        "trabajo": "Lider Técnico Backend"
+    },
+    "contactos": {
+        "email": "brian.d.lobo@gmail.com",
+        "github": "https://github.com/brianwolf",
+        "linkedin": "https://www.linkedin.com/in/brian-lobo-260507138",
+        "dockerhub": "https://hub.docker.com/u/brianwolf94"
+    },
+    "educacion": {
+        "secundaria": {
+            "nombre": "E.T.Nº8 D.E.13 Hogar Naval Stella Maris",
+            "fecha": "2013-2013",
+            "ubicacion": "",
+            "progreso": "Terminado",
+            "extra": ""
+        }
+    }
+}
