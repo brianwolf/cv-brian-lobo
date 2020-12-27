@@ -45,9 +45,7 @@ p {
 
 .wrapper {
   background: #42A8C0;
-  max-width: 70%;
   margin: 0 auto;
-  margin-top: 30px;
   position: relative;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -55,12 +53,10 @@ p {
 }
 
 .sidebar-wrapper {
+  left: 80%;
   background: #42A8C0;
   position: absolute;
   right: 0;
-  width: 270px;
-  height: 100%;
-  min-height: 800px;
   color: #fff;
 }
 
@@ -181,6 +177,7 @@ p {
 }
 
 .main-wrapper {
+  max-width: 80%;
   background: #fff;
   padding: 60px;
   padding-right: 300px;
