@@ -1,4 +1,4 @@
-var JSON_DATOS = "assets/json/data.json";
+var JSON_DATOS = "assets/json/datos.json";
 
 function crearMapeo(datos) {
     console.log(datos)

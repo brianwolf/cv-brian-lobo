@@ -2,17 +2,17 @@
 
 > CV propio para desplegarlo con gitpages
 
-Super simple, solo usa html, js y css.
-Para levantarlo local utilizo un docker con apache.
+* Super simple, solo usa html, js y css.
+* Para levantarlo local solo es necesario un docker con apache.
 
 ---
 
 ## :memo: Requisitos
 
-* Docker 19.03.8 o superior
+* docker 19.03.8 o superior
 * docker-compose 1.26.2 o superior
 
-## :tada: Uso
+## :package: Uso local
 
 * Ejecutar el siguiente comando
 
@@ -20,18 +20,27 @@ Para levantarlo local utilizo un docker con apache.
 docker-compose up -d
 ```
 
+## :bulb: Anexo
+
+```sh
+# Con esto se puede generar su version en pdf con wkhtmltopdf en un docker
+sudo chmod +x generarpdf.pdf
+. generarpdf.pdf
+```
+
+## :tada: Despliegue productivo con DNS
+
+* Utliza github pages para desplegarlo, [acá](https://docs.github.com/es/free-pro-team@latest/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site) hay documentación de como hacerlo
+
+* Para proxearlo se usa un servidor DNS gratuito llamado [dyno](https://www.dynu.com/en-US/) que redireccione a github pages.
+
 ---
-
-## :earth_americas: Paginas
-
-* [Servidor DNS Gratis](https://www.dynu.com/en-US/)
-* [Docker Apache](https://hub.docker.com/_/httpd)
-* [Emoticones del Readme](https://github.com/ikatyang/emoji-cheat-sheet)
 
 ## :grin: Autor
 
 > **Brian Lobo**
 
+* CV Online: [Brian Lobo](https://cv.brianlobo.theworkpc.com/)
+* Linkedin:  [Brian Lobo](https://www.linkedin.com/in/brian-lobo-260507138)
 * Github: [brianwolf](https://github.com/brianwolf)
-* Docker Hub:  [brianwolf94](https://hub.docker.com/u/brianwolf94)
 * Docker Hub:  [brianwolf94](https://hub.docker.com/u/brianwolf94)
