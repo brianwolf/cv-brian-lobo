@@ -34,6 +34,8 @@ sudo chmod +x generarpdf.pdf
 
 * Para proxearlo se usa un servidor DNS gratuito llamado [dyno](https://www.dynu.com/en-US/) que redireccione a github pages.
 
+* El template html usado se puede descargar de [acá](https://github.com/xriley/Orbit-Theme)
+
 ---
 
 ## :grin: Autor
