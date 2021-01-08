@@ -7,10 +7,10 @@ services:
         restart: on-failure:3
         volumes:
             - .:/usr/local/apache2/htdocs/
-        ports:
-            - 80:80
         networks: 
             - docker-net
+        ports:
+            - 80:80
 
 networks:
     docker-net:
