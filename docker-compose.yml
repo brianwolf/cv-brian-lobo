@@ -2,15 +2,21 @@ version: "3.8"
 
 services:
 
+    pdf:
+        image: openlabs/docker-wkhtmltopdf
+        volumes: 
+            - .:/data
+        command: --viewport-size 1920x1920 --zoom 0.5 /data/pdf.html /data/cv.pdf
+
     www:
         image: httpd:2.4
         restart: on-failure:3
         volumes:
             - .:/usr/local/apache2/htdocs/
-        ports:
-            - 80:80
         networks: 
             - docker-net
+        ports:
+            - 80:80
 
 networks:
     docker-net:
