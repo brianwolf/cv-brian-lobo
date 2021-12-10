@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.7"
 
 services:
 
@@ -6,7 +6,7 @@ services:
         image: openlabs/docker-wkhtmltopdf
         volumes: 
             - .:/data
-        command: --viewport-size 1920x1920 --zoom 0.5 /data/pdf.html /data/cv.pdf
+        command: --viewport-size 1920x1920 --zoom 0.4 /data/pdf.html /data/cv.pdf
 
     www:
         image: httpd:2.4
