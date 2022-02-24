@@ -245,7 +245,7 @@ p {
 }
 
 .main-wrapper .time {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
   top: 0;
   color: #97AAC3;
