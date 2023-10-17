@@ -24,8 +24,7 @@ docker-compose up -d
 
 ```sh
 # Con esto se puede generar su version en pdf con wkhtmltopdf en un docker
-sudo chmod +x generarpdf.pdf
-. generarpdf.pdf
+./generarpdf.pdf
 ```
 
 ## :tada: Despliegue productivo con DNS

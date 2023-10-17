@@ -2,18 +2,17 @@ version: "3.7"
 
 services:
 
-    # pdf:
-    #     image: openlabs/docker-wkhtmltopdf
-    #     volumes: 
-    #         - .:/data
-    #     command: --enable-local-file-access --viewport-size 1920x1920 --zoom 0.4 /data/index.html /data/cv.pdf
+    pdf:
+        image: brianwolf94/wkhtmltopdf
+        volumes:
+            - .:/data
+        command: --viewport-size 1080x1920 --zoom 0.4 /data/index.html /data/cv.pdf
 
     www:
         image: httpd:2.4
-        restart: on-failure:3
         volumes:
             - .:/usr/local/apache2/htdocs/
-        networks: 
+        networks:
             - docker-net
         ports:
             - 80:80
