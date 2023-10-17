@@ -8,23 +8,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- DEPENDENCIAS -->
+    <!-- LINKS -->
     <link
         href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic'
         rel='stylesheet' type='text/css'>
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- SCRIPTS -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 
     <!-- CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/index.css">
-
-    <!-- JS -->
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="CV">
         <div class="sidebar-wrapper">
             <div class="profile-container">
                 <img id="avatar" class="avatar" src="assets/images/avatar.jpg" alt="" />
@@ -41,7 +42,8 @@
                     <li class="home"><i class="fa fa-home"></i><a target="_blank">CABA, Argentina</a>
                     </li>
                     <li class="linkedin"><i class="fab fa-linkedin-in"></i><a
-                            href="https://linkedin.com/in/brian-david-lobo" target="_blank">brian-david-lobo</a></li>
+                            href="https://linkedin.com/in/brian-david-lobo" target="_blank">brian-david-lobo</a>
+                    </li>
                     <li class="github"><i class="fab fa-github"></i><a href="https://github.com/brianwolf"
                             target="_blank">brianwolf94</a>
                     </li>
@@ -78,8 +80,8 @@
             <div class="interests-container container-block">
                 <h2 class="container-block-title">Interest Positions</h2>
                 <ul class="list-unstyled interests-list">
-                    <li>Technical Leader</li>
                     <li>S.R.E.</li>
+                    <li>DevOps</li>
                 </ul>
             </div>
             <!--//interests-->
@@ -90,7 +92,8 @@
         <div class="main-wrapper">
 
             <section class="section summary-section">
-                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>Description of my
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>Description of
+                    my
                     activities</h2>
                 <div class="summary">
                     <p>
@@ -98,11 +101,13 @@
                         products and mantein CI/CD pipelines mades with Jenkins, tekton or gitlab
                     </p>
                     <p>
-                        Previously I was a technical leader from a development team for java and python, I have a
-                        responsability of task asign to members of the team, evaluate new candidates and training them
+                        Previously I was a technical leader from a development team for java and python, I has a
+                        responsability of task asign to members of the team, evaluate new candidates and training
+                        them
                     </p>
                     <p>
-                        Currently I am more interested in positions like devops and working with cloud technologies and
+                        Currently I am more interested in positions like devops and working with cloud technologies
+                        and
                         clusters. In my free time I play with Ansible, Terraform and Proxmox to install a kubernetes
                         cluster on-premise and install them tools like Graphana, Elastic search, and Istio
                     </p>
@@ -151,7 +156,8 @@
                         <p>
                             Installation and maintenance of RedHat clusters together with all its products, commonly
                             installed under
-                            on-premises hardware using vmware. My daily tasks are based on monitoring the status of the
+                            on-premises hardware using vmware. My daily tasks are based on monitoring the status of
+                            the
                             cluster, troubleshooting
                             with applications and install RedHat products and configure them for different clients.
                         </p>
@@ -194,7 +200,8 @@
                     <!--//meta-->
                     <div class="details">
                         <p>
-                            Technical leader in SGI web development of the client Swiss Medical in the Life insurance
+                            Technical leader in SGI web development of the client Swiss Medical in the Life
+                            insurance
                             area.
                         </p>
                     </div>
@@ -251,13 +258,22 @@
                 <h2 class="section-title"><span class="icon-holder"><i
                             class="fas fa-certificate"></i></span>Certifications
                 </h2>
-
-                <div class="item">
-                    <span class="project-title"><a
-                            href="https://www.credly.com/badges/803b22c3-90fc-493e-a61d-c6243516ea08/public_url"
-                            target="_blank">Red Hat®
-                            Certified Specialist in Containers</a></span>
+                <div class="skillset">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Red Hat®
+                                        Certified Specialist in Containers</h5>
+                                    <span class="project-title"><a
+                                            href="https://www.credly.com/badges/803b22c3-90fc-493e-a61d-c6243516ea08/public_url"
+                                            target="_blank">Link</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </section>
 
             <section class="section projects-section">
@@ -269,37 +285,34 @@
                         new tools to improve the performance and quality of software products.
                     </p>
                 </div>
-                <!--//intro-->
 
                 <div class="item">
                     <span class="project-title"><a href="https://github.com/brianwolf/devops"
-                            target="_blank">Devops</a></span> - <span class="project-tagline"> Tools for devops jobs to
+                            target="_blank">Devops</a></span> - <span class="project-tagline"> Tools for devops jobs
+                        to
                         practices and investigate</span>
                 </div>
                 <!--//item-->
 
                 <div class="item">
                     <span class="project-title"><a href="https://github.com/brianwolf/project-hefesto"
-                            target="_blank">Hefesto</a></span> - <span class="project-tagline"> Tool to create proyects
+                            target="_blank">Hefesto</a></span> - <span class="project-tagline"> Tool to create
+                        proyects
                         structures by yamls files</span>
                 </div>
                 <!--//item-->
                 <div class="item">
                     <span class="project-title"><a href="https://github.com/orgs/jaime-project/repositories"
-                            target="_blank">Jaime</a></span> - <span class="project-tagline"> Tool similar Ansible to
+                            target="_blank">Jaime</a></span> - <span class="project-tagline"> Tool similar Ansible
+                        to
                         administrate multi clusters by the use a python scripts</span>
-                </div>
-                <!--//item-->
-                <div class="item">
-                    <span class="project-title"><a href="https://github.com/brianwolf/project-python3-flask"
-                            target="_blank">Template python Flask</a></span> - <span class="project-tagline">Structure
-                        of proyect to python 3.10 with flask, swagger, docker and github actions</span>
                 </div>
                 <!--//item-->
                 <div class="item">
                     <span class="project-title"><a href="https://github.com/brianwolf/dockers-utiles"
                             target="_blank">Dockers útiles</a></span> - <span class="project-tagline">Project with
-                        differents types of containers, from automation tools like GoCD, Jenkins, through databases like
+                        differents types of containers, from automation tools like GoCD, Jenkins, through databases
+                        like
                         Redis, MongoDB, Cassandra, S3 file systems like Minio, etc.</span>
                 </div>
                 <!--//item-->
@@ -317,159 +330,108 @@
                     Knowly technologies
                 </h2>
                 <div class="skillset">
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">DevOps</h3>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cloud</h5>
+                                    <p class="card-text">AWS, Azure, Google cloud</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 80%"
-                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="details">
-                            <p>
-                                Kubernetes, Openshift, Keyklock, 3scale, Graphana, Logstash, Elastic search, Istio
-                            </p>
-                        </div>
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">CI/CD</h3>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">DevOps</h5>
+                                    <p class="card-text">Kubernetes, Openshift, Keyklock, Graphana, ELK, Istio, Kong
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 80%"
-                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="details">
-                            <p>
-                                ArgoCD, Tekton, Docker, Jenkins, CircleCI, Github Actions, GitlabCI
-                            </p>
-                        </div>
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">Infrastructure</h3>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">CI/CD</h5>
+                                    <p class="card-text">Git, ArgoCD, Tekton, Docker, Jenkins, CircleCI, Github
+                                        Actions,
+                                        GitlabCI</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 50%"
-                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="details">
-                            <p>Terraform, Ansible, Proxmox, VMWare</p>
-                        </div>
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">Back-end development</h3>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Infrastructure</h5>
+                                    <p class="card-text">Terragrunt, Terraform, Ansible, Proxmox, VMWare</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 99%"
-                                aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="details">
-                            <p>Python, Java, Typescript, Groovy, Ruby, C++, C#</p>
-                        </div>
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">Data Bases</h3>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Back-end development</h5>
+                                    <p class="card-text">Python 3.11, Java 17, Typescript, Javascript, Ruby, C#</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 99%"
-                                aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="details">
-                            <p>MongoDB, Cassandra, Neo4J, Redis, SQL Server, MySql, MariaDB, PostgreSQL, DB2, SQLite</p>
-                        </div>
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">Front-end</h3>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Relational Databases</h5>
+                                    <p class="card-text">SQL Server, MySql, MariaDB, PostgreSQL, DB2, Oracle</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 40%"
-                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="details">
-                            <p>Angular 12</p>
-                        </div>
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">Mobile</h3>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">NO-Relational Databases</h5>
+                                    <p class="card-text">MongoDB, Cassandra, Neo4J, Redis, DynamoDB</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 30%"
-                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="details">
-                            <p>Kotlin</p>
-                        </div>
-                    </div>
-                    <!--//item-->
-
-                    <div class="item">
-                        <div class="meta">
-                            <div class="upper-row">
-                                <h3 class="job-title">Administration</h3>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Front-end</h5>
+                                    <p class="card-text">Angular 16, css, scss, ES6, HTML</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="progress level-bar">
-                            <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 70%"
-                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mobile</h5>
+                                    <p class="card-text">Kotlin</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="details">
-                            <p>Miro, Trello, Jira, Taiga, Redmine, Easy-Redmine</p>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Administration</h5>
+                                    <p class="card-text">Miro, Trello, Jira, Taiga, Redmine, Easy-Redmine</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!--//item-->
-
                 </div>
-
-                <section class="section summary-section">
-                    <h2 class="section-title"><span class="icon-holder"><i class="fas fa-file"></i></span>Download PDF
-                    </h2>
-                    <div class="summary">
-                        <p>
-                            You can download the cv in PDF format from <a href="cv.pdf" download><b>this link</b></a>
-                        </p>
-                    </div>
-                </section>
-
             </section>
-            <!--//skills-section-->
+
+            <section class="section summary-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-file"></i></span>Download PDF
+                </h2>
+                <div class="summary">
+                    <p>
+                        You can download the cv in PDF format from <a href="cv.pdf" download><b>this link</b></a>
+                    </p>
+                </div>
+            </section>
         </div>
     </div>
 
     <footer class="footer"></footer>
 
 </body>
-<!--//main-body-->
 
 </html>

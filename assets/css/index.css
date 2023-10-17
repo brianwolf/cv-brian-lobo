@@ -1,27 +1,38 @@
+:root {
+  --color: #9b3b3b;
+  --color-time: #c57171;
+}
+
+
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #545E6C;
-  background: #f5f5f5;
+  background: #ffffff;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
 a {
-  color: #2d7788;
+  color: var(--color);
 }
 
 a:hover {
   text-decoration: underline;
-  color: #1a454f;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
+  color: var(--color);
 }
 
 a:focus {
@@ -55,7 +66,7 @@ p {
 }
 
 .sidebar-wrapper {
-  background: #42A8C0;
+  background: var(--color);
   position: absolute;
   right: 0;
   width: 270px;
@@ -190,36 +201,14 @@ p {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
-  color: #2d7788;
+  color: var(--color);
   position: relative;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
 .main-wrapper .section-title .icon-holder {
-  width: 30px;
-  height: 30px;
   margin-right: 8px;
-  display: inline-block;
-  color: #fff;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background: #2d7788;
-  text-align: center;
-  font-size: 16px;
-  position: relative;
-  top: -8px;
-}
-
-.main-wrapper .section-title .icon-holder .svg-inline--fa {
-  font-size: 14px;
-  margin-top: 6px;
 }
 
 .main-wrapper .section {
@@ -248,12 +237,12 @@ p {
   /* position: absolute; */
   right: 0;
   top: 0;
-  color: #97AAC3;
+  color: var(--color-time);
 }
 
 .main-wrapper .company {
   margin-bottom: 10px;
-  color: #97AAC3;
+  color: var(--color-time);
 }
 
 .main-wrapper .project-title {
@@ -320,14 +309,17 @@ p {
     position: static;
     width: inherit;
   }
+
   .main-wrapper {
     padding: 30px;
   }
+
   .main-wrapper .time {
     position: static;
     display: block;
     margin-top: 5px;
   }
+
   .main-wrapper .upper-row {
     margin-bottom: 0;
   }
@@ -336,7 +328,6 @@ p {
 @media (min-width: 992px) {
   .skillset .level-title {
     display: inline-block;
-    float: left;
     width: 30%;
     margin-bottom: 0;
   }

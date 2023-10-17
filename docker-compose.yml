@@ -2,11 +2,11 @@ version: "3.7"
 
 services:
 
-    pdf:
-        image: openlabs/docker-wkhtmltopdf
-        volumes: 
-            - .:/data
-        command: --viewport-size 1920x1080 --zoom 0.6 /data/index.html /data/cv.pdf
+    # pdf:
+    #     image: openlabs/docker-wkhtmltopdf
+    #     volumes: 
+    #         - .:/data
+    #     command: --enable-local-file-access --viewport-size 1920x1920 --zoom 0.4 /data/index.html /data/cv.pdf
 
     www:
         image: httpd:2.4
