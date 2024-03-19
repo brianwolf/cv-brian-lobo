@@ -2,22 +2,9 @@ version: "3.7"
 
 services:
 
-    pdf:
-        image: brianwolf94/wkhtmltopdf
-        volumes:
-            - .:/data
-        command: --viewport-size 1080x1920 --zoom 0.4 /data/index.html /data/cv.pdf
-
     www:
         image: httpd:2.4
         volumes:
             - .:/usr/local/apache2/htdocs/
-        networks:
-            - docker-net
         ports:
             - 80:80
-
-networks:
-    docker-net:
-        name: docker-net
-        external: false
